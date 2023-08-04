@@ -19,8 +19,8 @@ int main() {
         "Headless Rendering",
         SDL_WINDOWPOS_UNDEFINED,
         SDL_WINDOWPOS_UNDEFINED,
-        100,
-        100,
+        1,
+        1,
         SDL_WINDOW_HIDDEN
     );
 
