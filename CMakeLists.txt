@@ -13,6 +13,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 # Find SDL2 library
 find_package(SDL2 CONFIG REQUIRED)
 
+find_package(Stb REQUIRED)
+
 # Include the SDL2 headers
 # include_directories(${SDL2_INCLUDE_DIR})
 
@@ -23,6 +25,8 @@ set(SOURCES
 
 # Create the executable
 add_executable(HeadlessRenderingDemo ${SOURCES})
+
+target_include_directories(HeadlessRenderingDemo PRIVATE ${Stb_INCLUDE_DIR})
 
 target_link_libraries(HeadlessRenderingDemo
         PRIVATE
